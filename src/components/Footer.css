@@ -1,0 +1,9 @@
+footer {
+    padding: 20px;
+    text-align: center;
+    color: gray;
+}
+
+.footer__text {
+    margin-top: 20px;
+}
