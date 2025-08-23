@@ -17,6 +17,7 @@ header .presentantion {
     background-blend-mode: multiply; /* поверх картинки добавляем цвет */
     background-color: #78927a;
     position: relative;
+    box-shadow: 20px -5px 30px gray;
 }
 
 header .presentantion::after {

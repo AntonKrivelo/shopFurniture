@@ -99,8 +99,24 @@ body {
 	font-weight: 300;
 }
 
-
 .wrapper {
 	width: 1280px;
 	margin: 50px auto;
+}
+.wrapper__title {
+	text-align: center;
+	font-size: 32px;
+	padding-bottom: 30px;
+	font-weight: 600;
+}
+
+.shop__items {
+	display: flex;
+	column-gap: 20px;
+}
+
+.loading__title {
+	font-size: 20px;
+	font-weight: 900;
+	padding-left: 40%;
 }

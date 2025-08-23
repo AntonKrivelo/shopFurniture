@@ -1,12 +1,69 @@
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Item from './components/Item/Item';
+import Cart from './components/Cart/Cart';
 
 function App() {
+  const [items, setItems] = useState([]);
+  const [loadingItems, setIsLoadingItems] = useState(true);
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    setIsLoadingItems(true);
+    axios
+      .get('https://68385e662c55e01d184d08ef.mockapi.io/itemsNew')
+      .then(({ data }) => {
+        setItems(data);
+      })
+      .catch((error) => {
+        console.log('Ошибка при загрузке', error);
+      })
+      .finally(() => {
+        setIsLoadingItems(false);
+      });
+  }, []);
+
+  const addCartItem = (item) => {
+    setCart((prev) => [...prev, item]);
+    alert('Товар добавлен в корзину');
+  };
+
+  const onRemoveCartItem = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
+  };
+
   return (
-    <div className="wrapper">
-      <Header />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="wrapper">
+        <Routes>
+          <Route
+            path="cart"
+            element={<Cart cart={cart} items={items} onRemove={onRemoveCartItem} />}
+          />
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <h1 className="wrapper__title">Наши товары</h1>
+                <div className="shop__items">
+                  {loadingItems ? (
+                    <h3 className="loading__title">Пожалуйста подождите...</h3>
+                  ) : (
+                    items.map((item) => <Item key={item.id} item={item} onAdd={addCartItem} />)
+                  )}
+                </div>
+              </>
+            }
+          />
+        </Routes>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
