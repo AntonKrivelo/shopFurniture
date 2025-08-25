@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/AntonKrivelo/shopFurniture/static/css/main.b7bea278.css",
+    "main.js": "/AntonKrivelo/shopFurniture/static/js/main.2fce5a14.js",
+    "static/media/img1.jpg": "/AntonKrivelo/shopFurniture/static/media/img1.c41b25975026099fe678.jpg",
+    "index.html": "/AntonKrivelo/shopFurniture/index.html",
+    "main.b7bea278.css.map": "/AntonKrivelo/shopFurniture/static/css/main.b7bea278.css.map",
+    "main.2fce5a14.js.map": "/AntonKrivelo/shopFurniture/static/js/main.2fce5a14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7bea278.css",
+    "static/js/main.2fce5a14.js"
+  ]
+}
