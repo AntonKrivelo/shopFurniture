@@ -58,7 +58,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shopFurniture">
       <div className="wrapper">
         {showModalAdd ? (
           <ModalAdd
