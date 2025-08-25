@@ -1,3 +1,4 @@
+
 /* Reset and base styles  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
@@ -127,4 +128,63 @@ body {
 	border-radius: 5px;
 	padding: 10px 35px;
 	margin: 20px 0;
+}
+/* Планшет */
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .wrapper__title {
+    font-size: 28px;
+  }
+
+  .search__panel {
+    width: 250px;
+  }
+
+  .shop__items {
+    column-gap: 15px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .wrapper__title {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+
+  .search__panel {
+    width: 100%;
+    padding: 8px 20px;
+  }
+
+  .shop__items {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 15px;
+  }
+
+  .loading__title {
+    font-size: 18px;
+    padding-left: 0;
+  }
+}
+
+/* Очень маленькие устройства */
+@media (max-width: 480px) {
+  .wrapper__title {
+    font-size: 20px;
+  }
+
+  .search__panel {
+    padding: 6px 15px;
+  }
 }

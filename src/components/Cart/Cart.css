@@ -63,3 +63,79 @@
   width: 100px;
   border-radius: 5%;
 }
+
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .cart {
+    width: 90%;
+    padding: 40px;
+  }
+
+  .cart__title {
+    font-size: 22px;
+  }
+
+  .cart li {
+    font-size: 15px;
+  }
+
+  .cart__image {
+    width: 80px;
+  }
+
+  .cart h3 {
+    font-size: 16px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .cart {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .cart__title {
+    font-size: 20px;
+  }
+
+  .cart li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .cart__image {
+    width: 70px;
+    margin-bottom: 5px;
+  }
+
+  .cart h3 {
+    font-size: 15px;
+  }
+}
+
+/* Очень маленькие устройства */
+@media (max-width: 480px) {
+  .cart {
+    padding: 20px;
+  }
+
+  .cart__title {
+    font-size: 18px;
+  }
+
+  .cart li {
+    font-size: 13px;
+  }
+
+  .cart__image {
+    width: 60px;
+  }
+
+  .cart h3 {
+    font-size: 14px;
+  }
+}
