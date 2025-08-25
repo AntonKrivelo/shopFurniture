@@ -7,11 +7,9 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.cart__btn {
-  color: #000000;
-  padding-bottom: 20px;
-  cursor: pointer;
-  font-size: 18px;
+.horizontal__line {
+  border: 1px solid rgba(160, 159, 159, 0.5);
+  margin: 10px 0px;
 }
 
 .cart__title {

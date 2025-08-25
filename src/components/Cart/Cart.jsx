@@ -4,11 +4,13 @@ import { NavLink } from 'react-router-dom';
 const Cart = ({ cart, onRemove }) => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
+  console.log('render Cart');
   return (
     <div className="cart">
       <NavLink to="/">
-        <h2 className="cart__btn"> ⬅️ Выйти на главную страницу</h2>
+        <div className="cart__icon">⬅️ Выйти на главную страницу</div>
       </NavLink>
+      <hr className="horizontal__line"></hr>
       <h2 className="cart__title">🛒 Корзина</h2>
 
       {cart.length === 0 ? (
