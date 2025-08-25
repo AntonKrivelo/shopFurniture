@@ -5,11 +5,14 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Item from './components/Item/Item';
 import Cart from './components/Cart/Cart';
+import ModalAdd from './UI/ModalAdd/ModalAdd';
 
 function App() {
   const [items, setItems] = useState([]);
   const [loadingItems, setIsLoadingItems] = useState(true);
   const [cart, setCart] = useState([]);
+  const [showModalAdd, setShowModalAdd] = useState(false);
+  const [showModalDeleteCart, setShowModalDeleteCart] = useState(false);
 
   useEffect(() => {
     setIsLoadingItems(true);
@@ -28,16 +31,36 @@ function App() {
 
   const addCartItem = (item) => {
     setCart((prev) => [...prev, item]);
-    alert('Товар добавлен в корзину');
+    setShowModalAdd(true);
+    setTimeout(() => {
+      // закрыть окно через 2 секунды
+      setShowModalAdd(false);
+    }, 2000);
   };
 
   const onRemoveCartItem = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
+    setShowModalDeleteCart(true);
+    setTimeout(() => {
+      setShowModalDeleteCart(false);
+    }, 2000);
   };
 
   return (
     <BrowserRouter>
       <div className="wrapper">
+        {showModalAdd ? (
+          <ModalAdd
+            message="Товар добавлен в вашу корзину"
+            onClose={() => setShowModalAdd(false)}
+          />
+        ) : null}
+        {showModalDeleteCart ? (
+          <ModalAdd
+            message="Товар удален из вашей корзины"
+            onClose={() => setShowModalDeleteCart(false)}
+          />
+        ) : null}
         <Routes>
           <Route
             path="cart"
@@ -60,7 +83,6 @@ function App() {
             }
           />
         </Routes>
-
         <Footer />
       </div>
     </BrowserRouter>

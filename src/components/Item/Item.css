@@ -1,6 +1,7 @@
 .item {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 .item__img {
     width: 400px;
