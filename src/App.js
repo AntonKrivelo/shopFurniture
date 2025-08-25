@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import axios from 'axios';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -13,6 +13,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [showModalAdd, setShowModalAdd] = useState(false);
   const [showModalDeleteCart, setShowModalDeleteCart] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     setIsLoadingItems(true);
@@ -28,6 +29,16 @@ function App() {
         setIsLoadingItems(false);
       });
   }, []);
+
+  const filteredItems = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return items;
+    return items.filter((item) => {
+      const name = String(item.name ?? item.title ?? '').toLowerCase();
+      const desc = String(item.description ?? '').toLowerCase();
+      return name.includes(q) || desc.includes(q);
+    });
+  }, [items, searchQuery]);
 
   const addCartItem = (item) => {
     setCart((prev) => [...prev, item]);
@@ -72,11 +83,23 @@ function App() {
               <>
                 <Header />
                 <h1 className="wrapper__title">Наши товары</h1>
+                <form className="search__form" onSubmit={(e) => e.preventDefault()}>
+                  <input
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="search__panel"
+                    placeholder="Поиск по названию..."
+                  />
+                </form>
                 <div className="shop__items">
                   {loadingItems ? (
                     <h3 className="loading__title">Пожалуйста подождите...</h3>
+                  ) : filteredItems.length ? (
+                    filteredItems.map((item) => (
+                      <Item key={item.id} item={item} onAdd={addCartItem} />
+                    ))
                   ) : (
-                    items.map((item) => <Item key={item.id} item={item} onAdd={addCartItem} />)
+                    <p>Ничего не найдено по запросу “{searchQuery}”.</p>
                   )}
                 </div>
               </>

@@ -121,3 +121,10 @@ body {
 	font-weight: 900;
 	padding-left: 40%;
 }
+.search__panel {
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px 35px;
+	margin: 20px 0;
+}

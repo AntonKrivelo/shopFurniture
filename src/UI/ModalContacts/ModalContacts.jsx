@@ -2,7 +2,7 @@ import './ModalContacts.css';
 
 const ModalContacts = ({ onClose }) => {
   return (
-    <div className="modal__overlay-contacts">
+    <div className="modal__overlay-contacts" onClick={onClose}>
       <div className="modal__contacts">
         <h2 className="modal__contacts-title">Наши Контакты</h2>
         <ul className="contacts__items">
