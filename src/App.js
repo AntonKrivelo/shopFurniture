@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import Item from './components/Item/Item';
 import Cart from './components/Cart/Cart';
 import ModalAdd from './UI/ModalAdd/ModalAdd';
+import Pagination from './components/Paginaiton/Pagination';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -15,10 +16,13 @@ function App() {
   const [showModalDeleteCart, setShowModalDeleteCart] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
+  const [page, setPage] = useState(1); // pagination
+  const limit = 5; // сколько товаров на странице
+
   useEffect(() => {
     setIsLoadingItems(true);
     axios
-      .get('https://68385e662c55e01d184d08ef.mockapi.io/itemsNew')
+      .get(`https://68385e662c55e01d184d08ef.mockapi.io/itemsNew?page=${page}&limit=${limit}`)
       .then(({ data }) => {
         setItems(data);
       })
@@ -28,7 +32,7 @@ function App() {
       .finally(() => {
         setIsLoadingItems(false);
       });
-  }, []);
+  }, [page]);
 
   const filteredItems = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -106,6 +110,7 @@ function App() {
             }
           />
         </Routes>
+        <Pagination page={page} setPage={setPage} />
         <Footer />
       </div>
     </BrowserRouter>
