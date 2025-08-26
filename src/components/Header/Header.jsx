@@ -1,9 +1,9 @@
-import { useState, memo } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import ModalContacts from '../../UI/ModalContacts/ModalContacts';
 
-const Header = memo(() => {
+const Header = () => {
   const [showModalContacts, setShowModalContacts] = useState(false);
 
   return (
@@ -27,6 +27,6 @@ const Header = memo(() => {
       <div className="presentantion"></div>
     </header>
   );
-});
+};
 
 export default Header;
