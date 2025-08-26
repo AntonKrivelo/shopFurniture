@@ -132,6 +132,13 @@ body {
   color: #FFF;
   
 }
+
+.pagination__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 /* Планшет */
 @media (max-width: 1024px) {
   .wrapper {

@@ -12,7 +12,9 @@ const Header = memo(() => {
       <div>
         <span className="logo">Shop Furniture</span>
         <ul className="nav">
-          <li className="nav__item">Про нас</li>
+          <NavLink to="about">
+            <li className="nav__item">О нас</li>
+          </NavLink>
           <li onClick={() => setShowModalContacts(true)} className="nav__item">
             Контакты
           </li>

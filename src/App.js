@@ -7,6 +7,7 @@ import Item from './components/Item/Item';
 import Cart from './components/Cart/Cart';
 import ModalAdd from './UI/ModalAdd/ModalAdd';
 import Pagination from './components/Paginaiton/Pagination';
+import About from './components/About/About';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -81,6 +82,7 @@ function App() {
             path="cart"
             element={<Cart cart={cart} items={items} onRemove={onRemoveCartItem} />}
           />
+          <Route path="about" element={<About />} />
           <Route
             path="/"
             element={
@@ -105,12 +107,14 @@ function App() {
                   ) : (
                     <p>Ничего не найдено по запросу “{searchQuery}”.</p>
                   )}
+                  <div className="pagination__container">
+                    <Pagination page={page} setPage={setPage} />
+                  </div>
                 </div>
               </>
             }
           />
         </Routes>
-        <Pagination page={page} setPage={setPage} />
         <Footer />
       </div>
     </BrowserRouter>
