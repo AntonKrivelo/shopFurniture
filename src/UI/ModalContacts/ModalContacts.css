@@ -12,36 +12,40 @@
 }
 
 .modal__contacts {
-  background: #fff;
+  background: #000000;
   padding: 45px 65px;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
   text-align: center;
   animation: fadeIn 0.3s ease;
+  
 }
 
 .modal__contacts-title {
-    font-weight: 700;
-    font-size: 23px;
+  font-weight: 700;
+  font-size: 23px;
 }
+
 .contacts__items {
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 15px;
 }
 .contacts__item {
-    padding: 5px;
+  padding: 5px;
 }
 .contacts__btn {
-    margin-top: 20px;
-    background: #e74c3c;
-    border: none;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s ease;
+  margin-top: 20px;
+  background: #8e2f48;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
 }
 
 .close-btn:hover {

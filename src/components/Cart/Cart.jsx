@@ -16,7 +16,7 @@ const Cart = ({ cart, onRemove }) => {
       {cart.length === 0 ? (
         <p style={{ textAlign: 'center' }}>Корзина пуста</p>
       ) : (
-        <>
+        <div className="cart__container-items">
           <ul>
             {cart.map((item) => (
               <li key={item.id}>
@@ -26,7 +26,7 @@ const Cart = ({ cart, onRemove }) => {
             ))}
           </ul>
           <h3> Общая стоимость: {total} $</h3>
-        </>
+        </div>
       )}
     </div>
   );

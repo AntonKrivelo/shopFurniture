@@ -98,6 +98,8 @@ body {
 	font-family: Roboto, sans-serif;
 	color: #222;
 	font-weight: 300;
+  background-color: rgb(0, 0, 0);
+  color: #FFF;
 }
 
 .wrapper {
@@ -112,9 +114,8 @@ body {
 }
 
 .shop__items {
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .loading__title {
@@ -124,10 +125,12 @@ body {
 }
 .search__panel {
 	background-color: transparent;
-	border: 1px solid black;
+	border: 1px solid rgb(255, 255, 255);
 	border-radius: 5px;
 	padding: 10px 35px;
 	margin: 20px 0;
+  color: #FFF;
+  
 }
 /* Планшет */
 @media (max-width: 1024px) {
