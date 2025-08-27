@@ -116,6 +116,7 @@ body {
 .shop__items {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .loading__title {
@@ -156,7 +157,13 @@ body {
 
   .shop__items {
     column-gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0;
+    row-gap: 15px;
   }
+
 }
 
 /* Мобильные устройства */
