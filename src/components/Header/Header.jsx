@@ -10,7 +10,9 @@ const Header = () => {
     <header>
       {showModalContacts ? <ModalContacts onClose={() => setShowModalContacts(false)} /> : null}
       <div>
-        <span className="logo">Shop Furniture</span>
+        <NavLink to="/">
+          <span className="logo">Shop Furniture</span>
+        </NavLink>
         <ul className="nav">
           <NavLink to="about">
             <li className="nav__item">О нас</li>
