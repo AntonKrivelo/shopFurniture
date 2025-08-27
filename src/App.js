@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart';
 import ModalAdd from './UI/ModalAdd/ModalAdd';
 import Pagination from './components/Paginaiton/Pagination';
 import About from './components/About/About';
+import ProfileForm from './components/ProfileForm/ProfileForm';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -83,6 +84,7 @@ function App() {
             element={<Cart cart={cart} items={items} onRemove={onRemoveCartItem} />}
           />
           <Route path="about" element={<About />} />
+          <Route path="profile" element={<ProfileForm />} />
           <Route
             path="/"
             element={

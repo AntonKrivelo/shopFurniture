@@ -1,0 +1,35 @@
+.profile__form-title {
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.profile__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__form-input {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.profile__form-btn-ent {
+    border: 1px solid green;
+    background-color: green;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.profile__form-btn-reg {
+    border: 1px solid rgb(31, 92, 225);
+    background-color: rgb(31, 92, 225);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}

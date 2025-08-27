@@ -10,6 +10,13 @@
     margin-top: 40px;
 }
 
+.about__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .about__text {
     padding: 10px;
     font-size: 20px;

@@ -18,7 +18,9 @@ const Header = () => {
           <li onClick={() => setShowModalContacts(true)} className="nav__item">
             Контакты
           </li>
-          <li className="nav__item">Кабинет</li>
+          <NavLink to="profile">
+            <li className="nav__item">Кабинет</li>
+          </NavLink>
           <NavLink to="cart">
             <li className="nav__item">Корзина</li>
           </NavLink>
