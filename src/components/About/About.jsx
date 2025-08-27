@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="about">
       <NavLink to="/">
-        <div className="cart__icon">⬅️ Выйти на главную страницу</div>
+        <div className="link__home">⬅️ Выйти на главную страницу</div>
       </NavLink>
       <h1 className="about__title">О нас</h1>
       <div className="about__text-container">
