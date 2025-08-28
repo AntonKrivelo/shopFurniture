@@ -56,13 +56,13 @@ function App() {
     }, 2000);
   }, []);
 
-  const onRemoveCartItem = (id) => {
+  const onRemoveCartItem = useCallback((id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
     setShowModalDeleteCart(true);
     setTimeout(() => {
       setShowModalDeleteCart(false);
     }, 2000);
-  };
+  }, []);
 
   return (
     <BrowserRouter basename="/shopFurniture">
@@ -103,10 +103,9 @@ function App() {
                   ) : (
                     <p>Ничего не найдено по запросу “{searchQuery}”.</p>
                   )}
-                  <div className="pagination__container">
-                    <Pagination page={page} setPage={setPage} />
-                  </div>
+                  <div className="pagination__container"></div>
                 </div>
+                <Pagination page={page} setPage={setPage} />
               </>
             }
           />
