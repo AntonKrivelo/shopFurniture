@@ -1,0 +1,36 @@
+.search__form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__panel {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px 35px;
+    margin: 20px 0;
+    color: #FFF;
+    
+}
+
+@media(max-width: 1024px) {
+    .search__panel {
+        width: 250px;
+  }
+
+}
+
+@media(max-width: 768px) {
+    .search__panel {
+        width: 100%;
+        padding: 8px 20px;
+  }
+}
+
+@media(max-width: 768px) { 
+  .search__panel {
+        padding: 6px 15px;
+  }
+
+}

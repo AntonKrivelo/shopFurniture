@@ -9,6 +9,7 @@ import ModalAdd from './UI/ModalAdd/ModalAdd';
 import Pagination from './components/Paginaiton/Pagination';
 import About from './components/About/About';
 import ProfileForm from './components/ProfileForm/ProfileForm';
+import SearchForm from './components/SearchForm/SearchForm';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -91,14 +92,7 @@ function App() {
               <>
                 <Header />
                 <h1 className="wrapper__title">Наши товары</h1>
-                <form className="search__form" onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="search__panel"
-                    placeholder="Поиск по названию..."
-                  />
-                </form>
+                <SearchForm searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
                 <div className="shop__items">
                   {loadingItems ? (
                     <h3 className="loading__title">Пожалуйста подождите...</h3>

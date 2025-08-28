@@ -124,15 +124,6 @@ body {
 	font-weight: 900;
 	padding-left: 40%;
 }
-.search__panel {
-	background-color: transparent;
-	border: 1px solid rgb(255, 255, 255);
-	border-radius: 5px;
-	padding: 10px 35px;
-	margin: 20px 0;
-  color: #FFF;
-  
-}
 
 .pagination__container {
   display: flex;
@@ -149,10 +140,6 @@ body {
 
   .wrapper__title {
     font-size: 28px;
-  }
-
-  .search__panel {
-    width: 250px;
   }
 
   .shop__items {
@@ -178,11 +165,6 @@ body {
     padding-bottom: 20px;
   }
 
-  .search__panel {
-    width: 100%;
-    padding: 8px 20px;
-  }
-
   .shop__items {
     flex-direction: column;
     column-gap: 0;
@@ -199,9 +181,5 @@ body {
 @media (max-width: 480px) {
   .wrapper__title {
     font-size: 20px;
-  }
-
-  .search__panel {
-    padding: 6px 15px;
   }
 }
