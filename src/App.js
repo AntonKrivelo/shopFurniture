@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import axios from 'axios';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -46,14 +46,14 @@ function App() {
     });
   }, [items, searchQuery]);
 
-  const addCartItem = (item) => {
+  const addCartItem = useCallback((item) => {
     setCart((prev) => [...prev, item]);
     setShowModalAdd(true);
     setTimeout(() => {
       // закрыть окно через 2 секунды
       setShowModalAdd(false);
     }, 2000);
-  };
+  }, []);
 
   const onRemoveCartItem = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));

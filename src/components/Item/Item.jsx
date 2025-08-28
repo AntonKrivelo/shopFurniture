@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import './Item.css';
 
-const Item = ({ item, onAdd }) => {
+const Item = memo(({ item, onAdd }) => {
   return (
     <div className="item">
       <img className="item__img" src={item.imageUrl} alt="img-furniture" />
@@ -11,6 +12,6 @@ const Item = ({ item, onAdd }) => {
       </button>
     </div>
   );
-};
+});
 
 export default Item;
