@@ -114,8 +114,13 @@ body {
 }
 
 .shop__items {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: center;
+  align-items: center;
 
 }
 
@@ -143,12 +148,8 @@ body {
   }
 
   .shop__items {
-    column-gap: 15px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0;
-    row-gap: 15px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 
 }
@@ -166,9 +167,9 @@ body {
   }
 
   .shop__items {
-    flex-direction: column;
-    column-gap: 0;
-    row-gap: 15px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
   }
 
   .loading__title {
