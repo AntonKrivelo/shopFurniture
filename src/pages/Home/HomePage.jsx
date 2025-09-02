@@ -6,6 +6,7 @@ import Item from '../../components/Item/Item';
 import Pagination from '../../components/Pagination/Pagination';
 import SearchForm from '../../components/SearchForm/SearchForm';
 import Header from '../../components/Header/Header';
+import Loader from '../../components/Loader/Loader';
 
 export default function HomePage() {
   const dispatch = useDispatch();
@@ -54,7 +55,7 @@ export default function HomePage() {
       <SearchForm searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="shop__items">
         {loadingItems ? (
-          <h3 className="loading__title">Пожалуйста подождите...</h3>
+          <Loader />
         ) : filteredItems.length ? (
           filteredItems.map((item) => (
             <Item
