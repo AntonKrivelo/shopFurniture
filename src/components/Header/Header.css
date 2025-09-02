@@ -1,6 +1,5 @@
 header .logo {
-    font-weight: 700;
-    font-size: 25px;
+    font-size: 40px;
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
@@ -49,7 +48,7 @@ header .presentantion::before {
 }
 .nav__item {
     padding: 10px;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     color: #ffffff;
     font-weight: 900;
@@ -78,11 +77,6 @@ header .presentantion::before {
     top: 38%;
     left: 10%;
   }
-
-  .nav__item {
-    font-size: 16px;
-    padding: 8px;
-  }
 }
 
 /* Мобильные устройства */
@@ -110,11 +104,11 @@ header .presentantion::before {
     margin: 20px 20px;
     align-items: flex-start;
   }
+}
 
+@media(max-width: 590px) {
   .nav__item {
-    font-size: 14px;
-    padding: 6px;
-    
+    font-size: 16px;
   }
 }
 
@@ -138,9 +132,7 @@ header .presentantion::before {
     top: 32%;
     left: 8%;
   }
-
   .nav__item {
-    font-size: 15px;
-    padding: 5px;
+    font-size: 13px;
   }
 }

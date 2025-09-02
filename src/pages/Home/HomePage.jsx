@@ -36,6 +36,7 @@ export default function HomePage() {
     dispatch(addCartItemWithTimeout(item));
   };
 
+  // Поиск
   const filteredItems = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     if (!q) return items;
