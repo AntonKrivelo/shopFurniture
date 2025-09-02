@@ -5,6 +5,7 @@ import axios from 'axios';
 import Item from '../../components/Item/Item';
 import Pagination from '../../components/Pagination/Pagination';
 import SearchForm from '../../components/SearchForm/SearchForm';
+import Header from '../../components/Header/Header';
 
 export default function HomePage() {
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ export default function HomePage() {
 
   return (
     <>
+      <Header />
       <h1 className="wrapper__title">Наши товары</h1>
       <SearchForm searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="shop__items">

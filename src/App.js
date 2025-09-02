@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ModalAdd from './UI/ModalAdd/ModalAdd';
 import { showAddModal, showDeleteModal } from './store/cartSlice';
@@ -19,8 +18,6 @@ function App() {
   return (
     <BrowserRouter basename="/shopFurniture">
       <div className="wrapper">
-        <Header />
-
         {showModalAdd && (
           <ModalAdd
             message="Товар добавлен в вашу корзину"
