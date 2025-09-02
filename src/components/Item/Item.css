@@ -3,12 +3,12 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  width: 49%;
+  width: 100%;
 }
 .item__img {
   width: 100%;
   height: auto;
-  max-width: 400px;
+  width: 400px;
   border-radius: 5%;
   box-shadow: 10px 10px 10px 0px rgb(76, 128, 89);
   cursor: pointer;
@@ -109,10 +109,17 @@
   }
 }
 
+@media(max-width: 600px) {
+  .item__img {
+    width: 60%;
+    max-height: 250px;
+  }
+}
+
 /* Очень маленькие устройства */
 @media (max-width: 480px) {
   .item__img {
-    width: 100%;
+    width: 70%;
   }
   .item__title {
     font-size: 14px;

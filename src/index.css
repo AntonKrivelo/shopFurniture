@@ -178,6 +178,12 @@ body {
   }
 }
 
+@media(max-width: 600px) {
+  .shop__items {
+    grid-template-columns: repeat(1, 2fr);
+  }
+}
+
 /* Очень маленькие устройства */
 @media (max-width: 480px) {
   .wrapper__title {
